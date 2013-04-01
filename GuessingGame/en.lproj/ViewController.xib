@@ -36,12 +36,13 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIImageView" id="556455642">
+					<object class="IBUIImageView" id="373763189">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">-2147483392</int>
 						<string key="NSFrame">{{5, 108}, {311, 357}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="669590074"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">5</int>
@@ -129,7 +130,7 @@
 								</object>
 							</dictionary>
 						</object>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="1015237057">
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="702366792">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">cat_butto.png</string>
 						</object>
@@ -137,7 +138,7 @@
 							<int key="type">1</int>
 							<double key="pointSize">17</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="120558449">
+						<object class="NSFont" key="IBUIFont" id="687075655">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">17</double>
 							<int key="NSfFlags">16</int>
@@ -158,14 +159,14 @@
 						<bool key="IBUIHasAttributedTitle">YES</bool>
 						<object class="NSAttributedString" key="IBUINormalAttributedTitle">
 							<string key="NSString">2</string>
-							<dictionary key="NSAttributes" id="85923006">
+							<dictionary key="NSAttributes" id="720316071">
 								<reference key="NSColor" ref="590659510"/>
 								<reference key="NSFont" ref="453395135"/>
 							</dictionary>
 						</object>
-						<reference key="IBUINormalBackgroundImage" ref="1015237057"/>
+						<reference key="IBUINormalBackgroundImage" ref="702366792"/>
 						<reference key="IBUIFontDescription" ref="882344139"/>
-						<reference key="IBUIFont" ref="120558449"/>
+						<reference key="IBUIFont" ref="687075655"/>
 					</object>
 					<object class="IBUIButton" id="494254718">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -182,11 +183,11 @@
 						<bool key="IBUIHasAttributedTitle">YES</bool>
 						<object class="NSAttributedString" key="IBUINormalAttributedTitle">
 							<string key="NSString">3</string>
-							<reference key="NSAttributes" ref="85923006"/>
+							<reference key="NSAttributes" ref="720316071"/>
 						</object>
-						<reference key="IBUINormalBackgroundImage" ref="1015237057"/>
+						<reference key="IBUINormalBackgroundImage" ref="702366792"/>
 						<reference key="IBUIFontDescription" ref="882344139"/>
-						<reference key="IBUIFont" ref="120558449"/>
+						<reference key="IBUIFont" ref="687075655"/>
 					</object>
 					<object class="IBUIButton" id="132343531">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -203,7 +204,7 @@
 						<bool key="IBUIHasAttributedTitle">YES</bool>
 						<object class="NSAttributedString" key="IBUINormalAttributedTitle">
 							<string key="NSString">4</string>
-							<dictionary key="NSAttributes" id="682740211">
+							<dictionary key="NSAttributes" id="303529876">
 								<reference key="NSColor" ref="590659510"/>
 								<reference key="NSFont" ref="453395135"/>
 								<reference key="NSOriginalFont" ref="453395135"/>
@@ -213,9 +214,9 @@
 								</object>
 							</dictionary>
 						</object>
-						<reference key="IBUINormalBackgroundImage" ref="1015237057"/>
+						<reference key="IBUINormalBackgroundImage" ref="702366792"/>
 						<reference key="IBUIFontDescription" ref="882344139"/>
-						<reference key="IBUIFont" ref="120558449"/>
+						<reference key="IBUIFont" ref="687075655"/>
 					</object>
 					<object class="IBUIButton" id="786602673">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -246,9 +247,9 @@
 								<reference key="NSParagraphStyle" ref="85011611"/>
 							</dictionary>
 						</object>
-						<reference key="IBUINormalBackgroundImage" ref="1015237057"/>
+						<reference key="IBUINormalBackgroundImage" ref="702366792"/>
 						<reference key="IBUIFontDescription" ref="882344139"/>
-						<reference key="IBUIFont" ref="120558449"/>
+						<reference key="IBUIFont" ref="687075655"/>
 					</object>
 					<object class="IBUIButton" id="892621530">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -271,9 +272,9 @@
 								<reference key="NSParagraphStyle" ref="85011611"/>
 							</dictionary>
 						</object>
-						<reference key="IBUINormalBackgroundImage" ref="1015237057"/>
+						<reference key="IBUINormalBackgroundImage" ref="702366792"/>
 						<reference key="IBUIFontDescription" ref="882344139"/>
-						<reference key="IBUIFont" ref="120558449"/>
+						<reference key="IBUIFont" ref="687075655"/>
 					</object>
 					<object class="IBUIButton" id="385020161">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -290,11 +291,11 @@
 						<bool key="IBUIHasAttributedTitle">YES</bool>
 						<object class="NSAttributedString" key="IBUINormalAttributedTitle">
 							<string key="NSString">8</string>
-							<reference key="NSAttributes" ref="682740211"/>
+							<reference key="NSAttributes" ref="303529876"/>
 						</object>
-						<reference key="IBUINormalBackgroundImage" ref="1015237057"/>
+						<reference key="IBUINormalBackgroundImage" ref="702366792"/>
 						<reference key="IBUIFontDescription" ref="882344139"/>
-						<reference key="IBUIFont" ref="120558449"/>
+						<reference key="IBUIFont" ref="687075655"/>
 					</object>
 					<object class="IBUIButton" id="541415723">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -313,9 +314,9 @@
 							<string key="NSString">9</string>
 							<reference key="NSAttributes" ref="851605655"/>
 						</object>
-						<reference key="IBUINormalBackgroundImage" ref="1015237057"/>
+						<reference key="IBUINormalBackgroundImage" ref="702366792"/>
 						<reference key="IBUIFontDescription" ref="882344139"/>
-						<reference key="IBUIFont" ref="120558449"/>
+						<reference key="IBUIFont" ref="687075655"/>
 					</object>
 					<object class="IBUIImageView" id="1067782233">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -323,7 +324,7 @@
 						<string key="NSFrame">{{0, 1}, {320, 112}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="669590074"/>
+						<reference key="NSNextKeyView" ref="373763189"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -371,7 +372,6 @@
 						<string key="NSFrame">{{180, 473}, {72, 55}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -547,7 +547,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">coolCat</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="556455642"/>
+						<reference key="destination" ref="373763189"/>
 					</object>
 					<int key="connectionID">189</int>
 				</object>
@@ -669,7 +669,7 @@
 							<reference ref="386285701"/>
 							<reference ref="494254718"/>
 							<reference ref="132343531"/>
-							<reference ref="556455642"/>
+							<reference ref="373763189"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -743,7 +743,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">188</int>
-						<reference key="object" ref="556455642"/>
+						<reference key="object" ref="373763189"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 				</array>

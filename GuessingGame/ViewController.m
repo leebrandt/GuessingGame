@@ -7,74 +7,35 @@
 //
 
 #import "ViewController.h"
+#import "Choice.h"
+
 @interface ViewController ()
 @property (nonatomic) NSInteger tries;
 @property (nonatomic) NSInteger answer;
 @property (nonatomic) NSInteger wins;
+@property (nonatomic, strong) GuessingGame *game;
 @end
 
 @implementation ViewController
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"wins"]; //to reset during testing
-    self.wins = [[NSUserDefaults standardUserDefaults] integerForKey:@"wins"];
-    [self displayWinCats];
-    if(self.wins<3){
-        [self startNewGame];
-    }else{
-        [self.guessButtons setValue:[NSNumber numberWithBool:YES] forKey:@"hidden"];
-    }
+    self.game = [[GuessingGame alloc] initWithMaxChoices:[self.guessButtons count]];
+    self.game.wins = [[NSUserDefaults standardUserDefaults] integerForKey:@"wins"];
+    self.game.maxTries = 4;
+    self.game.maxWins = 3;
 }
 
--(IBAction)buttonPressed:(UIButton *)sender
-{
-    self.tries++;
-    NSInteger guess = sender.titleLabel.text.intValue;
-    NSLog(@"You guessed: %d and the answer is: %d", guess, self.answer);
-    if(guess == self.answer)
-    {
-        self.wins++;
-        [[NSUserDefaults standardUserDefaults] setInteger:self.wins forKey:@"wins"];
-        [self displayWinCats];
-        [self.guessButtons setValue:[NSNumber numberWithBool:YES] forKey:@"hidden"];
-        if(self.wins<3){
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"That's Right!"
-                                                            message:@"You are the smartest person alive!"
-                                                           delegate:self
-                                                  cancelButtonTitle:@"Play Again"
-                                                  otherButtonTitles:nil , nil];
-            [alert show];
-        }else{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"That's Right!"
-                                                            message:@"You Have Beaten the Guessing Game!!"
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil , nil];
-            [alert show];
-        }
-        return;
+-(void)syncUI{
+    for (UIButton *guessButton in self.guessButtons) {
+        Choice *choice = [self.game choiceAtIndex:[self.guessButtons indexOfObject:guessButton ]];
+        NSLog(@"choices %d", choice.value);
+        guessButton.titleLabel.text = [NSString stringWithFormat:@"%d", choice.value];
+        [guessButton setHidden:choice.isEnabled];
     }
-    else{
-        [sender setHidden:YES];
-    }
-    if(self.tries>=4){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over"
-                                                        message:@"4 tries is all ya get"
-                                                       delegate:self
-                                              cancelButtonTitle:@"Try Again?"
-                                              otherButtonTitles:nil , nil];
-        [alert show];
-    }
-}
-
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if(self.wins<3) {
-        [self startNewGame];
-    }
-}
--(void)displayWinCats{
+    
     for (UIImageView *winCat in self.winCats) {
         NSInteger winDex = [self.winCats indexOfObject:winCat];
         if( winDex < (self.wins)){
@@ -82,6 +43,39 @@
         }
     }
     [self.coolCat setHidden:self.wins<3 ];
+}
+
+-(IBAction)buttonPressed:(UIButton *)sender
+{
+    NSLog(@"Guess:%d of %d total guesses", self.game.tries, self.game.maxTries);
+    [self.game guess:[self.game.choices objectAtIndex:[self.guessButtons indexOfObject:sender]]];
+    if(self.game.isWinner)
+    {
+        [[NSUserDefaults standardUserDefaults] setInteger:self.game.wins forKey:@"wins"];
+        if(self.game.wins < self.game.maxWins){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"That's Right!"
+                                                            message:@"You are the smartest person alive!"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Play Again"otherButtonTitles:nil , nil];
+            [alert show];
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"That's Right!"
+                                                            message:@"You Have Beaten the Guessing Game!!"
+                                                            delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil , nil];
+                [alert show];
+        }
+        
+    }
+    [self syncUI];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(self.wins<3) {
+        [self startNewGame];
+    }
 }
 
 -(void)startNewGame{

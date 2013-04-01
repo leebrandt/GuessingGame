@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GuessingGame.h"
 
 @interface ViewController : UIViewController<UIAlertViewDelegate>
 
