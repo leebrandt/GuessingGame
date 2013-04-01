@@ -10,7 +10,9 @@
 
 @interface ViewController : UIViewController<UIAlertViewDelegate>
 
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *winCats;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *guessButtons;
-@property (strong, nonatomic) IBOutlet UILabel *winLabel;
+
 -(IBAction)buttonPressed:(id)sender;
+
 @end
