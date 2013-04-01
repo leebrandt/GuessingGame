@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *winCats;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *guessButtons;
+@property (strong, nonatomic) IBOutlet UIImageView *coolCat;
 
 -(IBAction)buttonPressed:(id)sender;
 

@@ -61,8 +61,8 @@
     if(self.tries>=4){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over"
                                                         message:@"4 tries is all ya get"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"Cancel"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Try Again?"
                                               otherButtonTitles:nil , nil];
         [alert show];
     }
@@ -77,11 +77,11 @@
 -(void)displayWinCats{
     for (UIImageView *winCat in self.winCats) {
         NSInteger winDex = [self.winCats indexOfObject:winCat];
-        NSLog(@"At index: %d", winDex);
         if( winDex < (self.wins)){
             [winCat setHidden:NO];
         }
     }
+    [self.coolCat setHidden:self.wins<3 ];
 }
 
 -(void)startNewGame{
