@@ -19,12 +19,12 @@
 @property (nonatomic) NSInteger maxChoices;
 @property (nonatomic) BOOL canGuessAgain;
 @property (nonatomic) BOOL isWinner;
-
-@property (nonatomic, strong) NSMutableArray *choices; //Choice
+@property (nonatomic, strong) NSMutableArray *choices; //of Choice
 
 
 -(id)initWithMaxChoices:(NSInteger)maxChoices;
 -(void)guess:(Choice *)choice;
 -(Choice *)choiceAtIndex:(NSUInteger)index;
+-(void)resetGame;
 
 @end

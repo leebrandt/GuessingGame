@@ -120,12 +120,12 @@
 			isa = PBXGroup;
 			children = (
 				9B675CB6170A178B005130D3 /* Model */,
-				9B86ECE7170A0185005380E5 /* Resources */,
 				9B3422BF170503D700AA366A /* AppDelegate.h */,
 				9B3422C0170503D700AA366A /* AppDelegate.m */,
 				9B3422C8170503D700AA366A /* ViewController.h */,
 				9B3422C9170503D700AA366A /* ViewController.m */,
 				9B3422CB170503D700AA366A /* ViewController.xib */,
+				9B86ECE7170A0185005380E5 /* Resources */,
 				9B3422B7170503D700AA366A /* Supporting Files */,
 			);
 			path = GuessingGame;

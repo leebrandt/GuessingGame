@@ -7,6 +7,7 @@
 //
 
 #import "GuessingGame.h"
+
 @interface GuessingGame()
 @property (nonatomic, readwrite) NSInteger answer;
 -(void)initializeChoicesWithAnswer:(NSInteger)answer;
@@ -14,18 +15,25 @@
 
 @implementation GuessingGame
 
+-(NSMutableArray *)choices{
+    if(!_choices) _choices = [[NSMutableArray alloc] init];
+    return _choices;
+}
+
 - (id)initWithMaxChoices:(NSInteger)maxChoices
 {
     self = [super init];
     if (self) {
         self.canGuessAgain = YES;
         self.maxChoices = maxChoices;
-        self.answer = arc4random() % maxChoices;
+        self.answer = [self generateRandomAnswer];
     }
     return self;
 }
 
 -(void)initializeChoicesWithAnswer:(NSInteger)answer{
+    [self.choices removeAllObjects];
+    NSLog(@"%d", answer);
     for (int i = 1; i <= self.maxChoices; i++) {
         Choice *choice = [[Choice alloc] init];
         choice.value = i;
@@ -47,12 +55,31 @@
 
 -(void)guess:(Choice *)choice{
     self.tries++;
-    
     if(choice.isAnswer){
         self.wins++;
         self.isWinner = YES;
     }else{
-        self.canGuessAgain = self.tries < 4;
+        self.canGuessAgain = self.tries < self.maxTries;
+        if(!self.canGuessAgain){
+            [self.choices setValue:[NSNumber numberWithBool:NO] forKey:@"isEnabled"];
+        }else{
+            choice.isEnabled = NO;
+        }
+    }
+}
+
+-(NSInteger)generateRandomAnswer{
+    return (arc4random() % self.maxChoices) + 1;
+}
+
+-(void)resetGame{
+    if(self.wins < self.maxWins){
+        self.tries = 0;
+        self.isWinner = NO;
+        [self initializeChoicesWithAnswer:[self generateRandomAnswer]];
+    }
+    else{
+        [self.choices setValue:[NSNumber numberWithBool:NO] forKey:@"isEnabled"];
     }
 }
 
