@@ -14,14 +14,12 @@
 -(void)initializeChoicesWithAnswer:(NSInteger)answer;
 @property (nonatomic) NSInteger tries;
 @property (nonatomic, strong) NSMutableArray *choices; //of Choice
-@property (nonatomic, strong) FunkyGuessingGame *game;
 @end
 
 @implementation GuessingGame
 
 -(NSMutableArray *)choices{
     
-    self.game = [[FunkyGuessingGame alloc] init];
     if(!_choices) _choices = [[NSMutableArray alloc] init];
     return _choices;
 }
@@ -39,7 +37,6 @@
 
 -(void)initializeChoicesWithAnswer:(NSInteger)answer{
     [self.choices removeAllObjects];
-    
     
     NSLog(@"%d", answer);
     for (int i = 1; i <= self.maxChoices; i++) {
