@@ -35,17 +35,18 @@
 		9B86ED09170A0275005380E5 /* lettuce-cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B86ED06170A0275005380E5 /* lettuce-cat.png */; };
 		9B86ED0A170A0275005380E5 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B86ED07170A0275005380E5 /* logo.png */; };
 		9B86ED0B170A0275005380E5 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B86ED08170A0275005380E5 /* logo@2x.png */; };
+		9BABB93D170CEE8300D03B6E /* FunkyGuessingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BABB93C170CEE8300D03B6E /* FunkyGuessingGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9B3422AD170503D700AA366A /* GuessingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B3422AD170503D700AA366A /* CatGuessingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatGuessingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B3422B0170503D700AA366A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9B3422B2170503D700AA366A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9B3422B4170503D700AA366A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9B3422B8170503D700AA366A /* GuessingGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GuessingGame-Info.plist"; sourceTree = "<group>"; };
+		9B3422B8170503D700AA366A /* CatGuessingGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CatGuessingGame-Info.plist"; sourceTree = "<group>"; };
 		9B3422BA170503D700AA366A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9B3422BC170503D700AA366A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9B3422BE170503D700AA366A /* GuessingGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GuessingGame-Prefix.pch"; sourceTree = "<group>"; };
+		9B3422BE170503D700AA366A /* CatGuessingGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CatGuessingGame-Prefix.pch"; sourceTree = "<group>"; };
 		9B3422BF170503D700AA366A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9B3422C0170503D700AA366A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9B3422C8170503D700AA366A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -73,6 +74,8 @@
 		9B86ED06170A0275005380E5 /* lettuce-cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lettuce-cat.png"; sourceTree = "<group>"; };
 		9B86ED07170A0275005380E5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		9B86ED08170A0275005380E5 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		9BABB93B170CEE8300D03B6E /* FunkyGuessingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunkyGuessingGame.h; sourceTree = "<group>"; };
+		9BABB93C170CEE8300D03B6E /* FunkyGuessingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyGuessingGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +104,7 @@
 		9B3422AE170503D700AA366A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B3422AD170503D700AA366A /* GuessingGame.app */,
+				9B3422AD170503D700AA366A /* CatGuessingGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,10 +140,10 @@
 				9B86ED02170A0253005380E5 /* Default.png */,
 				9B86ED03170A0253005380E5 /* Default@2x.png */,
 				9B86ECF7170A01F5005380E5 /* Default-568h@2x.png */,
-				9B3422B8170503D700AA366A /* GuessingGame-Info.plist */,
+				9B3422B8170503D700AA366A /* CatGuessingGame-Info.plist */,
 				9B3422B9170503D700AA366A /* InfoPlist.strings */,
 				9B3422BC170503D700AA366A /* main.m */,
-				9B3422BE170503D700AA366A /* GuessingGame-Prefix.pch */,
+				9B3422BE170503D700AA366A /* CatGuessingGame-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,6 +155,8 @@
 				9B675CB8170A17B1005130D3 /* GuessingGame.m */,
 				9B675CBA170A17D0005130D3 /* Choice.h */,
 				9B675CBB170A17D0005130D3 /* Choice.m */,
+				9BABB93B170CEE8300D03B6E /* FunkyGuessingGame.h */,
+				9BABB93C170CEE8300D03B6E /* FunkyGuessingGame.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -181,9 +186,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9B3422AC170503D600AA366A /* GuessingGame */ = {
+		9B3422AC170503D600AA366A /* CatGuessingGame */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B3422D0170503D700AA366A /* Build configuration list for PBXNativeTarget "GuessingGame" */;
+			buildConfigurationList = 9B3422D0170503D700AA366A /* Build configuration list for PBXNativeTarget "CatGuessingGame" */;
 			buildPhases = (
 				9B3422A9170503D600AA366A /* Sources */,
 				9B3422AA170503D600AA366A /* Frameworks */,
@@ -193,9 +198,9 @@
 			);
 			dependencies = (
 			);
-			name = GuessingGame;
+			name = CatGuessingGame;
 			productName = GuessingGame;
-			productReference = 9B3422AD170503D700AA366A /* GuessingGame.app */;
+			productReference = 9B3422AD170503D700AA366A /* CatGuessingGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -207,7 +212,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = OneRedCup;
 			};
-			buildConfigurationList = 9B3422A8170503D600AA366A /* Build configuration list for PBXProject "GuessingGame" */;
+			buildConfigurationList = 9B3422A8170503D600AA366A /* Build configuration list for PBXProject "CatGuessingGame" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -219,7 +224,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B3422AC170503D600AA366A /* GuessingGame */,
+				9B3422AC170503D600AA366A /* CatGuessingGame */,
 			);
 		};
 /* End PBXProject section */
@@ -264,6 +269,7 @@
 				9B3422CA170503D700AA366A /* ViewController.m in Sources */,
 				9B675CB9170A17B1005130D3 /* GuessingGame.m in Sources */,
 				9B675CBC170A17D0005130D3 /* Choice.m in Sources */,
+				9BABB93D170CEE8300D03B6E /* FunkyGuessingGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,9 +355,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GuessingGame/GuessingGame-Prefix.pch";
-				INFOPLIST_FILE = "GuessingGame/GuessingGame-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "GuessingGame/CatGuessingGame-Prefix.pch";
+				INFOPLIST_FILE = "GuessingGame/CatGuessingGame-Info.plist";
+				PRODUCT_NAME = CatGuessingGame;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -360,9 +366,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GuessingGame/GuessingGame-Prefix.pch";
-				INFOPLIST_FILE = "GuessingGame/GuessingGame-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "GuessingGame/CatGuessingGame-Prefix.pch";
+				INFOPLIST_FILE = "GuessingGame/CatGuessingGame-Info.plist";
+				PRODUCT_NAME = CatGuessingGame;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -370,7 +376,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9B3422A8170503D600AA366A /* Build configuration list for PBXProject "GuessingGame" */ = {
+		9B3422A8170503D600AA366A /* Build configuration list for PBXProject "CatGuessingGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B3422CE170503D700AA366A /* Debug */,
@@ -379,7 +385,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B3422D0170503D700AA366A /* Build configuration list for PBXNativeTarget "GuessingGame" */ = {
+		9B3422D0170503D700AA366A /* Build configuration list for PBXNativeTarget "CatGuessingGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B3422D1170503D700AA366A /* Debug */,

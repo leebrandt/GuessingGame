@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GuessingGame.h"
 
-@interface ViewController : UIViewController<UIAlertViewDelegate>
+@interface ViewController : UIViewController<UIAlertViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *winCats;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *guessButtons;
