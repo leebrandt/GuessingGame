@@ -15,10 +15,11 @@
 @property (nonatomic) NSInteger maxWins;
 @property (nonatomic) NSInteger maxTries;
 @property (nonatomic) NSInteger maxChoices;
+@property (nonatomic) NSTimeInterval duration;
 @property (nonatomic) BOOL canGuessAgain;
 @property (nonatomic) BOOL isWinner;
 
--(id)initWithMaxChoices:(NSInteger)maxChoices;
+-(void)startGame;
 -(void)guess:(Choice *)choice;
 -(Choice *)choiceAtIndex:(NSUInteger)index;
 -(void)resetGame;

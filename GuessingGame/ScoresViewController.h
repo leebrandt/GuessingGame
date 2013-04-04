@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScoresViewController : UIViewController
+@interface ScoresViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @end

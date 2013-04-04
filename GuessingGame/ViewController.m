@@ -18,10 +18,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.game = [[GuessingGame alloc] initWithMaxChoices:[self.guessButtons count]];
+    self.game = [[GuessingGame alloc] init];
+    self.game.maxChoices = 9;
     self.game.wins = [[NSUserDefaults standardUserDefaults] integerForKey:@"wins"];
     self.game.maxTries = 4;
     self.game.maxWins = 3;
+    [self.game startGame];
     self.title = @"Guessing Game";
 }
 
@@ -46,6 +48,7 @@
     Choice *choice = [self.game choiceAtIndex:[self.guessButtons indexOfObject:sender]];
     [self.game guess:choice];
     if(self.game.isWinner){
+        [self storeScore];
         [self showWinnerMessage];
     }else{
         if (!self.game.canGuessAgain) {
@@ -55,8 +58,17 @@
     [self syncUI];
 }
 
+-(void)storeScore
+{
+    NSMutableArray *scores = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"scores"] mutableCopy];
+    if(!scores) scores = [[NSMutableArray alloc] init];
+    [scores addObject:[NSNumber numberWithDouble:self.game.duration]];
+    [[NSUserDefaults standardUserDefaults] setValue:scores forKey:@"scores"];
+}
+
 - (IBAction)didTapScoresButton:(id)sender {
-    ScoresViewController *scoresViewController = [[ScoresViewController alloc] initWithNibName:@"ScoresViewController" bundle:nil];
+    ScoresViewController *scoresViewController = [[ScoresViewController alloc] initWithNibName:@"ScoresViewController"
+                                                                                        bundle:nil];
     [self.navigationController pushViewController:scoresViewController animated:YES];
 }
 

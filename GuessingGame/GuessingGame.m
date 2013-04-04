@@ -9,11 +9,15 @@
 #import "GuessingGame.h"
 #import "FunkyGuessingGame.h"
 
+#define DEFAULT_MAX_CHOICES 9
+
 @interface GuessingGame()
 @property (nonatomic) NSInteger answer;
--(void)initializeChoicesWithAnswer:(NSInteger)answer;
 @property (nonatomic) NSInteger tries;
+@property (nonatomic, strong) NSDate *startTime;
 @property (nonatomic, strong) NSMutableArray *choices; //of Choice
+
+-(void)initializeChoicesWithAnswer:(NSInteger)answer;
 @end
 
 @implementation GuessingGame
@@ -24,15 +28,12 @@
     return _choices;
 }
 
-- (id)initWithMaxChoices:(NSInteger)maxChoices
+- (void)startGame
 {
-    self = [super init];
-    if (self) {
-        self.canGuessAgain = YES;
-        self.maxChoices = maxChoices;
-        self.answer = [self generateRandomAnswer];
-    }
-    return self;
+    self.canGuessAgain = YES;
+    self.maxChoices = DEFAULT_MAX_CHOICES;
+    self.answer = [self generateRandomAnswer];
+    self.startTime = [NSDate date];
 }
 
 -(void)initializeChoicesWithAnswer:(NSInteger)answer{
@@ -63,6 +64,7 @@
     if(choice.isAnswer){
         self.wins++;
         self.isWinner = YES;
+        self.duration = [self.startTime timeIntervalSinceDate:[NSDate date]];
     }else{
         self.canGuessAgain = self.tries < self.maxTries;
         if(!self.canGuessAgain){
