@@ -15,6 +15,8 @@
 		9B3422C1170503D700AA366A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3422C0170503D700AA366A /* AppDelegate.m */; };
 		9B3422CA170503D700AA366A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3422C9170503D700AA366A /* ViewController.m */; };
 		9B3422CD170503D700AA366A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B3422CB170503D700AA366A /* ViewController.xib */; };
+		9B637FF2170E0F5400CE15D6 /* ScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B637FF0170E0F5400CE15D6 /* ScoresViewController.m */; };
+		9B637FF3170E0F5400CE15D6 /* ScoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B637FF1170E0F5400CE15D6 /* ScoresViewController.xib */; };
 		9B675CB9170A17B1005130D3 /* GuessingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B675CB8170A17B1005130D3 /* GuessingGame.m */; };
 		9B675CBC170A17D0005130D3 /* Choice.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B675CBB170A17D0005130D3 /* Choice.m */; };
 		9B86ECEB170A01E1005380E5 /* anothercat.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B86ECE8170A01E1005380E5 /* anothercat.png */; };
@@ -35,7 +37,6 @@
 		9B86ED09170A0275005380E5 /* lettuce-cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B86ED06170A0275005380E5 /* lettuce-cat.png */; };
 		9B86ED0A170A0275005380E5 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B86ED07170A0275005380E5 /* logo.png */; };
 		9B86ED0B170A0275005380E5 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B86ED08170A0275005380E5 /* logo@2x.png */; };
-		9BABB93D170CEE8300D03B6E /* FunkyGuessingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BABB93C170CEE8300D03B6E /* FunkyGuessingGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,9 @@
 		9B3422C8170503D700AA366A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9B3422C9170503D700AA366A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9B3422CC170503D700AA366A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		9B637FEF170E0F5400CE15D6 /* ScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoresViewController.h; sourceTree = "<group>"; };
+		9B637FF0170E0F5400CE15D6 /* ScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoresViewController.m; sourceTree = "<group>"; };
+		9B637FF1170E0F5400CE15D6 /* ScoresViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoresViewController.xib; sourceTree = "<group>"; };
 		9B675CB7170A17B1005130D3 /* GuessingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuessingGame.h; sourceTree = "<group>"; };
 		9B675CB8170A17B1005130D3 /* GuessingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuessingGame.m; sourceTree = "<group>"; };
 		9B675CBA170A17D0005130D3 /* Choice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Choice.h; sourceTree = "<group>"; };
@@ -74,8 +78,6 @@
 		9B86ED06170A0275005380E5 /* lettuce-cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lettuce-cat.png"; sourceTree = "<group>"; };
 		9B86ED07170A0275005380E5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		9B86ED08170A0275005380E5 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
-		9BABB93B170CEE8300D03B6E /* FunkyGuessingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunkyGuessingGame.h; sourceTree = "<group>"; };
-		9BABB93C170CEE8300D03B6E /* FunkyGuessingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyGuessingGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,9 @@
 				9B3422C8170503D700AA366A /* ViewController.h */,
 				9B3422C9170503D700AA366A /* ViewController.m */,
 				9B3422CB170503D700AA366A /* ViewController.xib */,
+				9B637FEF170E0F5400CE15D6 /* ScoresViewController.h */,
+				9B637FF0170E0F5400CE15D6 /* ScoresViewController.m */,
+				9B637FF1170E0F5400CE15D6 /* ScoresViewController.xib */,
 				9B86ECE7170A0185005380E5 /* Resources */,
 				9B3422B7170503D700AA366A /* Supporting Files */,
 			);
@@ -155,8 +160,6 @@
 				9B675CB8170A17B1005130D3 /* GuessingGame.m */,
 				9B675CBA170A17D0005130D3 /* Choice.h */,
 				9B675CBB170A17D0005130D3 /* Choice.m */,
-				9BABB93B170CEE8300D03B6E /* FunkyGuessingGame.h */,
-				9BABB93C170CEE8300D03B6E /* FunkyGuessingGame.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				9B86ED09170A0275005380E5 /* lettuce-cat.png in Resources */,
 				9B86ED0A170A0275005380E5 /* logo.png in Resources */,
 				9B86ED0B170A0275005380E5 /* logo@2x.png in Resources */,
+				9B637FF3170E0F5400CE15D6 /* ScoresViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +273,7 @@
 				9B3422CA170503D700AA366A /* ViewController.m in Sources */,
 				9B675CB9170A17B1005130D3 /* GuessingGame.m in Sources */,
 				9B675CBC170A17D0005130D3 /* Choice.m in Sources */,
-				9BABB93D170CEE8300D03B6E /* FunkyGuessingGame.m in Sources */,
+				9B637FF2170E0F5400CE15D6 /* ScoresViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

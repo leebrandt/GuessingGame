@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ScoresViewController.h"
 #import "Choice.h"
 
 @interface ViewController ()
@@ -21,6 +22,7 @@
     self.game.wins = [[NSUserDefaults standardUserDefaults] integerForKey:@"wins"];
     self.game.maxTries = 4;
     self.game.maxWins = 3;
+    self.title = @"Guessing Game";
 }
 
 -(void)syncUI{
@@ -51,6 +53,11 @@
         }
     }
     [self syncUI];
+}
+
+- (IBAction)didTapScoresButton:(id)sender {
+    ScoresViewController *scoresViewController = [[ScoresViewController alloc] initWithNibName:@"ScoresViewController" bundle:nil];
+    [self.navigationController pushViewController:scoresViewController animated:YES];
 }
 
 -(void)showWinnerMessage{

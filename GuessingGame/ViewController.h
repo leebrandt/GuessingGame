@@ -16,5 +16,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *coolCat;
 
 -(IBAction)buttonPressed:(id)sender;
+- (IBAction)didTapScoresButton:(id)sender;
 
 @end
